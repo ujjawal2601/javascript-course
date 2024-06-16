@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task1</title>
+</head>
+<body>
+    <h1>hello</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+</body>
+<script>
+    const start=function(str){
+        console.log(`hello ${str}`,Date.now());
+    }
+    const stop=function(str){
+        console.log(`bie ${str}`);
+    }
+    
+    document.querySelector("#start").addEventListener("click",function(){
+        startinterval=setInterval(start,3000,'ujjawal');
+    });
+    document.querySelector("#stop").addEventListener("click",function(){
+        clearInterval(startinterval);
+        console.log(`cleared intercal at ${Date.now()}`)
+    });
+</script>
+</html> 
